@@ -1,0 +1,176 @@
+<template>
+  <div class="col-6 col-md-4 text-right">
+    <div
+      class="botao"
+      :class="{ active: menuActive }"
+      @click="toggleMenu"
+      title="Menu"
+    >
+      Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="nav-left" :class="{ active: menuActive }">
+    <a class="inicio" href="" title="Início">Início</a>
+    <a class="sobre-menu" href="" title="Sobre">Sobre mim</a>
+    <a class="trabalhos scroll" href="#trabalhos" title="Trabalhos"
+      >Trabalhos</a
+    >
+    <a class="contato-menu scroll" href="#contato" title="Contato">Contato</a>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "MenuHeader",
+  data() {
+    return {
+      menuActive: false,
+    };
+  },
+  methods: {
+    toggleMenu(event) {
+      event.preventDefault();
+      this.menuActive = !this.menuActive;
+      document.querySelector(".botao").classList.toggle(".active");
+    },
+  },
+};
+</script>
+
+<style scoped>
+.botao {
+  z-index: 4;
+  display: block;
+  margin-left: 14px;
+  margin-top: 10px;
+  height: 40px;
+  width: 55px;
+  position: absolute;
+  top: 0%;
+  right: 0;
+  cursor: pointer;
+  font-size: 0;
+  -webkit-transform: rotate(0deg);
+  -khtml-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -khtml-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.botao span {
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  display: block;
+  background: #333;
+  border-radius: 0;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: rotate(0deg);
+  -khtml-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out;
+  -khtml-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.botao span:nth-child(1) {
+  top: 3px;
+}
+.botao span:nth-child(2) {
+  top: 14px;
+}
+.botao span:nth-child(3) {
+  top: 25px;
+}
+
+.botao:hover span:nth-child(1) {
+  top: 1px;
+}
+
+.botao:hover span:nth-child(3) {
+  top: 27px;
+}
+
+.botao.active span:nth-child(1) {
+  top: 11px;
+  background: #fff;
+  -webkit-transform: rotate(45deg);
+  -khtml-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.botao.active span:nth-child(2) {
+  top: 11px;
+  background: #fff;
+  -webkit-transform: rotate(-45deg);
+  -khtml-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.botao.active span:nth-child(3),
+.open-nav.active span:nth-child(4) {
+  top: 8px;
+  width: 0%;
+  left: 50%;
+}
+
+.nav-left {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 3;
+  transition: 0.3s all ease;
+  left: -100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  width: 100%;
+  height: 100vh;
+}
+.nav-left.active {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-left a {
+  display: table;
+  margin: 2.5rem auto;
+  width: 100%;
+  text-align: center;
+  padding: 18px 0;
+  font-weight: 700;
+  font-size: 50px;
+  max-height: 46px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+.nav-left a:hover {
+  color: var(--azul);
+}
+</style>

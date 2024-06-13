@@ -1,25 +1,22 @@
 <template>
   <header class="row">
     <div class="col-6 col-md-4 text-left">
-      <a href="index.php">Helton Mori</a>
+      <a href="/">Helton Mori</a>
     </div>
     <div class="col-4 d-none d-sm-none d-md-block text-center">
       <span>Disponível para novos projetos</span>
     </div>
-    <div class="col-6 col-md-4 text-right">
-      <div class="botao" title="Menu">
-        Menu
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
   </header>
+  <MenuHeader />
 </template>
 
 <script>
+import MenuHeader from "@/components/MenuHeader.vue";
 export default {
   name: "PageHeader",
+  components: {
+    MenuHeader,
+  },
 };
 </script>
 
