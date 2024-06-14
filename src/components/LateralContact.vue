@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: "LateralContato",
+  name: "LateralContact",
 };
 </script>
 

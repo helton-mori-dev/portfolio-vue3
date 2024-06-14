@@ -8,17 +8,17 @@
     </div>
   </header>
   <MenuHeader />
-  <LateralContato />
+  <LateralContact />
 </template>
 
 <script>
 import MenuHeader from "@/components/MenuHeader.vue";
-import LateralContato from "@/components/LateralContato.vue";
+import LateralContact from "@/components/LateralContact.vue";
 export default {
   name: "PageHeader",
   components: {
     MenuHeader,
-    LateralContato,
+    LateralContact,
   },
 };
 </script>
