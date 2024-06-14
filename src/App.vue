@@ -1,15 +1,17 @@
 <template>
   <PageHeader />
   <AboutMe />
+  <MyProjects />
 </template>
 
 <script>
 import PageHeader from "@/components/PageHeader.vue";
 import AboutMe from "@/components/AboutMe.vue";
+import MyProjects from "@/components/MyProjects.vue";
 
 export default {
   name: "App",
-  components: { PageHeader, AboutMe },
+  components: { PageHeader, AboutMe, MyProjects },
 };
 </script>
 
@@ -123,10 +125,6 @@ body #app {
 
   .paragrafo-direita-mobile {
     padding: 40px 0 15px;
-  }
-
-  .texto-fundo-preto {
-    margin-bottom: 15px;
   }
 
   .trabalho {
