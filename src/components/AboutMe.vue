@@ -37,10 +37,7 @@
             técnico, fazendo cursos e tentando contribuir com projetos
             open-source.
           </p>
-          <a
-            class="link-trabalho saiba-mais mb-5"
-            href="sobre.php"
-            title="Portfolio"
+          <a class="link-trabalho saiba-mais mb-5" href="/" title="Portfolio"
             >Saiba mais</a
           >
         </div>
@@ -79,30 +76,6 @@ export default {
 
 .sobre h1 {
   margin-bottom: 90px;
-}
-
-.botao-azul {
-  color: #fff;
-  background: var(--azul);
-  font-weight: 300;
-  border-radius: 40px;
-  margin: 30px auto 0;
-  text-align: center;
-  padding: 8px 22px;
-  font-size: 14px;
-  border: 2px solid var(--azul);
-  transition: 0.3s all ease;
-}
-
-#form-contato .botao-input.botao-azul {
-  padding: 8px 22px;
-  margin-top: -10px;
-}
-
-.botao-azul:hover {
-  color: var(--azul);
-  text-decoration: none;
-  background: #fff;
 }
 
 .foto {

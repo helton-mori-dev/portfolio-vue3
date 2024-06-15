@@ -2,16 +2,18 @@
   <PageHeader />
   <AboutMe />
   <MyProjects />
+  <PageFooter />
 </template>
 
 <script>
 import PageHeader from "@/components/PageHeader.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import MyProjects from "@/components/MyProjects.vue";
+import PageFooter from "@/components/PageFooter.vue";
 
 export default {
   name: "App",
-  components: { PageHeader, AboutMe, MyProjects },
+  components: { PageHeader, AboutMe, MyProjects, PageFooter },
 };
 </script>
 
@@ -75,6 +77,30 @@ body #app {
 
 .container-preto h3 {
   margin-bottom: 30px;
+}
+
+.botao-azul {
+  color: #fff;
+  background: var(--azul);
+  font-weight: 300;
+  border-radius: 40px;
+  margin: 30px auto 0;
+  text-align: center;
+  padding: 8px 22px;
+  font-size: 14px;
+  border: 2px solid var(--azul);
+  transition: 0.3s all ease;
+}
+
+.botao-input.botao-azul {
+  padding: 8px 22px;
+  margin-top: -10px;
+}
+
+.botao-azul:hover {
+  color: var(--azul);
+  text-decoration: none;
+  background: #fff;
 }
 
 @media screen and (min-width: 768px) {
