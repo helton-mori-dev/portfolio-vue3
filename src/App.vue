@@ -41,6 +41,22 @@ body #app {
   justify-content: center;
   position: relative;
   margin-bottom: 150px;
+
+  @media screen and (min-width: 768px) {
+    width: 700px;
+
+    h1 {
+      font-size: 50px;
+    }
+
+    .foto {
+      top: -192px;
+    }
+
+    h2.titulo {
+      text-align: center;
+    }
+  }
 }
 
 .container-branco,
@@ -59,24 +75,35 @@ body #app {
 .container-preto {
   background: #000;
   flex-direction: column;
-}
 
-.container-preto h2,
-.container-preto h3 {
-  color: #fff;
-}
+  h2,
+  h3 {
+    color: #fff;
+  }
 
-.container-preto h2 {
-  margin-bottom: 40px;
-}
+  h2 {
+    margin-bottom: 40px;
+  }
 
-.container-preto > .row {
-  margin-left: auto;
-  margin-right: auto;
-}
+  > .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.container-preto h3 {
-  margin-bottom: 30px;
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 767px) {
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin-top: 25px;
+    }
+  }
 }
 
 .botao-azul {
@@ -90,34 +117,16 @@ body #app {
   font-size: 14px;
   border: 2px solid var(--azul);
   transition: 0.3s all ease;
-}
 
-.botao-input.botao-azul {
-  padding: 8px 22px;
-  margin-top: -10px;
-}
-
-.botao-azul:hover {
-  color: var(--azul);
-  text-decoration: none;
-  background: #fff;
-}
-
-@media screen and (min-width: 768px) {
-  .main {
-    width: 700px;
+  &.botao-input {
+    padding: 8px 22px;
+    margin-top: -10px;
   }
 
-  .main h1 {
-    font-size: 50px;
-  }
-
-  .foto {
-    top: -192px;
-  }
-
-  h2.titulo {
-    text-align: center;
+  &:hover {
+    color: var(--azul);
+    text-decoration: none;
+    background: #fff;
   }
 }
 
@@ -129,15 +138,6 @@ body #app {
 
   h2 {
     font-size: 2rem;
-  }
-
-  .container-preto h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-
-  .container-preto h2 {
-    margin-top: 25px;
   }
 
   .saiba-mais {
@@ -188,10 +188,10 @@ body #app {
   .foto-sobre {
     display: flex;
     justify-content: center;
-  }
 
-  .sobre .foto-sobre img {
-    margin-bottom: 40px;
+    img {
+      margin-bottom: 40px;
+    }
   }
 }
 </style>

@@ -34,17 +34,19 @@ export default {
 <style scoped>
 #footer {
   text-align: center;
-}
 
-#footer h2 {
-  width: 100%;
-  font-size: 50px;
-}
+  h2 {
+    width: 100%;
+    font-size: 50px;
+  }
 
-#footer .linha > div {
-  background: #ccc;
-  display: block;
-  height: 2px;
+  .linha {
+    > div {
+      background: #ccc;
+      display: block;
+      height: 2px;
+    }
+  }
 }
 
 .rodape-contato {

@@ -66,30 +66,32 @@ export default {
 </script>
 
 <style scoped>
-#trabalhos .container-preto {
-  padding-bottom: 170px;
+#trabalhos {
+  .container-preto {
+    padding-bottom: 170px;
+  }
 }
 
 .link-trabalho {
   color: #fff;
   transition: 0.3s all ease;
-}
 
-.link-trabalho:hover {
-  color: #fff;
-  text-decoration: none;
-}
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 
-.link-trabalho:after {
-  content: url(../assets/img/arrow-right.svg);
-  margin-left: 15px;
-  position: relative;
-  left: 0;
-  transition: 0.3s all ease;
-}
+  &:after {
+    content: url(../assets/img/arrow-right.svg);
+    margin-left: 15px;
+    position: relative;
+    left: 0;
+    transition: 0.3s all ease;
+  }
 
-.link-trabalho:hover:after {
-  left: 15px;
+  &:hover:after {
+    left: 15px;
+  }
 }
 
 .saiba-mais {
@@ -99,10 +101,10 @@ export default {
 .trabalho {
   margin-bottom: 30px;
   width: 100%;
-}
 
-.trabalho img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 .container-contato {
@@ -110,12 +112,17 @@ export default {
   margin: auto;
 }
 
-.sobre.container {
-  margin-top: 100px;
-}
-.sobre .foto-sobre img {
-  float: left;
-  width: 80%;
+.sobre {
+  &.container {
+    margin-top: 100px;
+  }
+
+  .foto-sobre {
+    img {
+      float: left;
+      width: 80%;
+    }
+  }
 }
 
 .texto-fundo-branco {
@@ -137,20 +144,24 @@ export default {
   margin-bottom: 50px;
 }
 
-.experiencia h4,
-.formacao h4,
-.conhecimentos h4 {
-  color: var(--blue);
-  font-size: 18px;
-  font-weight: 700;
+.experiencia,
+.formacao,
+.conhecimentos {
+  h4 {
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
 
-.conhecimentos .techs {
-  display: flex;
-  flex-wrap: wrap;
-}
+.conhecimentos {
+  .techs {
+    display: flex;
+    flex-wrap: wrap;
 
-.conhecimentos .techs p {
-  width: 170px;
+    p {
+      width: 170px;
+    }
+  }
 }
 </style>

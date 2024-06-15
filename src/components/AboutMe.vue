@@ -57,25 +57,31 @@ export default {
   position: absolute;
   bottom: 3%;
   left: 49%;
+
+  &:before {
+    content: url(../assets/img/seta.svg);
+  }
 }
 
-.arrow-down:before {
-  content: url(../assets/img/seta.svg);
+.main {
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+
+    span {
+      color: var(--azul);
+    }
+  }
 }
 
-.main h1,
-.sobre h1 {
-  font-weight: bold;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.main h1 span {
-  color: var(--azul);
-}
-
-.sobre h1 {
-  margin-bottom: 90px;
+.sobre {
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 90px;
+  }
 }
 
 .foto {
@@ -98,35 +104,37 @@ export default {
   padding: 40px;
 }
 
-.container-preto h3 {
-  font-size: 30px;
-  font-weight: 600;
-}
+.container-preto {
+  h3 {
+    font-size: 30px;
+    font-weight: 600;
+  }
 
-#trabalhos .container-preto {
-  padding-bottom: 170px;
+  &#trabalhos {
+    padding-bottom: 170px;
+  }
 }
 
 .link-trabalho {
   color: #fff;
   transition: 0.3s all ease;
-}
 
-.link-trabalho:hover {
-  color: #fff;
-  text-decoration: none;
-}
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 
-.link-trabalho:after {
-  content: url(../assets/img/arrow-right.svg);
-  margin-left: 15px;
-  position: relative;
-  left: 0;
-  transition: 0.3s all ease;
-}
+  &:after {
+    content: url(../assets/img/arrow-right.svg);
+    margin-left: 15px;
+    position: relative;
+    left: 0;
+    transition: 0.3s all ease;
+  }
 
-.link-trabalho:hover:after {
-  left: 15px;
+  &:hover:after {
+    left: 15px;
+  }
 }
 
 .saiba-mais {
@@ -136,9 +144,9 @@ export default {
 .trabalho {
   margin-bottom: 30px;
   width: 100%;
-}
 
-.trabalho img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 </style>
