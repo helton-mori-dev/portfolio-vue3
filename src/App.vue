@@ -49,10 +49,6 @@ body #app {
       font-size: 50px;
     }
 
-    .foto {
-      top: -192px;
-    }
-
     h2.titulo {
       text-align: center;
     }
@@ -117,6 +113,7 @@ body #app {
   font-size: 14px;
   border: 2px solid var(--azul);
   transition: 0.3s all ease;
+  display: table;
 
   &.botao-input {
     padding: 8px 22px;

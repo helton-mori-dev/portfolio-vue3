@@ -17,12 +17,12 @@
         <div class="col-12 col-md-5"></div>
         <div class="col-12 col-md-7">
           <h2 class="titulo-apresentacao titulo">
-            Sou desenvolvedor web front-end e back-end
+            Sou desenvolvedor de sistemas
           </h2>
         </div>
       </div>
     </div>
-    <div class="row container-preto">
+    <div class="container-preto">
       <div class="row container">
         <div class="col-md-5">
           <img src="../assets/img/foto.png" alt="Minha foto" class="foto" />
@@ -31,15 +31,15 @@
           <p
             class="texto-fundo-preto paragrafo-direita mb-0 paragrafo-direita-mobile"
           >
-            Meu nome é Helton, tenho experiencia em programação front-end,
-            back-end e sistemas embarcados. Sou apaixonado por tecnologia e
-            informática. Estou sempre buscando meu aperfeiçoamento pessoal e
-            técnico, fazendo cursos e tentando contribuir com projetos
-            open-source.
+            Meu nome é Helton, tenho experiencia em desenvolvimento de software,
+            principalmente front-end. Também tenho conhecimento em back-end e
+            sistemas embarcados. Sou apaixonado por tecnologia e informática.
+            Estou sempre buscando meu aperfeiçoamento pessoal e técnico, fazendo
+            cursos e tentando contribuir com projetos open-source.
           </p>
-          <a class="link-trabalho saiba-mais mb-5" href="/" title="Portfolio"
+          <!-- <a class="link-trabalho saiba-mais mb-5" href="/" title="Portfolio"
             >Saiba mais</a
-          >
+          > -->
         </div>
       </div>
     </div>
@@ -75,12 +75,17 @@ export default {
   }
 }
 
-.sobre {
+#sobre {
   h1 {
     font-weight: bold;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 90px;
+  }
+  @media screen and (min-width: 768px) {
+    .foto {
+      top: -192px;
+    }
   }
 }
 

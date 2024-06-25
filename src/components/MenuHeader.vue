@@ -13,12 +13,30 @@
     </div>
   </div>
   <div class="nav-left" :class="{ active: menuActive }">
-    <a class="inicio" href="" title="Início">Início</a>
-    <a class="sobre-menu" href="" title="Sobre">Sobre mim</a>
-    <a class="trabalhos scroll" href="#trabalhos" title="Trabalhos"
+    <a class="inicio" href="/" title="Início" @click="closeMenuAndScroll"
+      >Início</a
+    >
+    <a
+      class="sobre-menu"
+      href="#sobre"
+      title="Sobre"
+      @click="closeMenuAndScroll"
+      >Sobre mim</a
+    >
+    <a
+      class="trabalhos scroll"
+      href="#trabalhos"
+      title="Trabalhos"
+      @click="closeMenuAndScroll"
       >Trabalhos</a
     >
-    <a class="contato-menu scroll" href="#contato" title="Contato">Contato</a>
+    <a
+      class="contato-menu scroll"
+      href="#footer"
+      title="Contato"
+      @click="closeMenuAndScroll"
+      >Contato</a
+    >
   </div>
 </template>
 
@@ -34,7 +52,17 @@ export default {
     toggleMenu(event) {
       event.preventDefault();
       this.menuActive = !this.menuActive;
-      document.querySelector(".botao").classList.toggle(".active");
+    },
+    closeMenuAndScroll(event) {
+      this.menuActive = false;
+      const targetId = event.target.getAttribute("href");
+      if (targetId.startsWith("#")) {
+        event.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     },
   },
 };
