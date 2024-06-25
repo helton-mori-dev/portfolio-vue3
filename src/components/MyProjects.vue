@@ -10,49 +10,50 @@
             utilizadas: Vue.js, Vuetify, Vue Router e CSS
           </p>
           <a
-            href="http://ong-amaar-maringa.esy.es/"
+            href="https://helton-mori-dev.github.io/ong-amaar-vue/"
             class="link-trabalho"
             target="blank"
             >Ir para ONG Amaar</a
           >
         </div>
         <div class="col-12 col-md-6">
-          <img src="img/foto-amaar.png" alt="ONG amaar" />
+          <img src="../assets/img/foto-amaar.png" alt="ONG amaar" />
         </div>
       </div>
 
       <div class="container row trabalho">
         <div class="col-12 col-md-6">
-          <h3>Bianch</h3>
+          <h3>Viso Store</h3>
           <p class="texto-fundo-preto">
             Loja virtual desenvolvida na plataforma Magento, utilizando PHP,
             HTML, CSS, SAAS, Jquery e Javascript
           </p>
           <a
-            href="https://www.bianch.com.br/"
+            href="https://www.visostore.com.br/"
             class="link-trabalho"
             target="blank"
-            >Ir para Bianch Pilot Shop</a
+            >Ir para Viso Store</a
           >
         </div>
         <div class="col-12 col-md-6">
-          <img src="img/foto-bianch.png" alt="" />
+          <img src="../assets/img/foto-aquario.png" alt="" />
         </div>
       </div>
 
       <div class="container row trabalho">
         <div class="col-12 col-md-6">
-          <h3>Aquário</h3>
+          <h3>Front end Mentor E-commerce page</h3>
           <p class="texto-fundo-preto">
-            Loja virtual desenvolvida na plataforma Magento, utilizando PHP,
-            HTML, CSS, SAAS, Jquery e Javascript
+            Projeto teste realizado com Vue.js 3 e Vuex 4
           </p>
-          <a href="https://loja.aquario.com.br/" class="link-trabalho"
-            >Ir para Loja Aquário</a
+          <a
+            href="https://helton-mori-dev.github.io/front-end-mentor-e-commerce/"
+            class="link-trabalho"
+            >Ir para o projeto</a
           >
         </div>
         <div class="col-12 col-md-6">
-          <img src="img/foto-aquario.png" alt="" />
+          <img src="../assets/img/foto-aquario.png" alt="" />
         </div>
       </div>
     </div>

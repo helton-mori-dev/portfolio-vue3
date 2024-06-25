@@ -45,7 +45,7 @@ export default {
   z-index: 4;
   display: block;
   margin-left: 14px;
-  margin-top: 10px;
+  margin-top: 16px;
   height: 40px;
   width: 55px;
   position: absolute;

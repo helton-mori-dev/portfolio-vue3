@@ -1,10 +1,8 @@
 <template>
   <header class="row">
-    <div class="col-6 col-md-4 text-left">
-      <a href="/">Helton Mori</a>
-    </div>
+    <div class="col-6 col-md-4"></div>
     <div class="col-4 d-none d-sm-none d-md-block text-center">
-      <span>Disponível para novos projetos</span>
+      <a href="/" class="title">Helton Mori</a>
     </div>
   </header>
   <MenuHeader />
@@ -27,21 +25,19 @@ export default {
 header {
   padding: 25px 35px 10px;
   max-width: 100%;
-
-  .text-left {
-    font-size: 30px;
-    font-weight: 700;
-    white-space: nowrap;
-
-    a {
-      color: #000;
-      text-decoration: none;
-    }
-  }
+  align-items: center;
 
   .text-center {
     font-size: 15px;
     color: #999;
+
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+      white-space: nowrap;
+      color: #000;
+      text-decoration: none;
+    }
 
     span {
       position: relative;
