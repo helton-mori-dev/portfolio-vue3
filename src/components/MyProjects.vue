@@ -2,18 +2,17 @@
   <section id="trabalhos">
     <div class="container-preto">
       <div class="container row trabalho">
-        <h2 class="col-12 titulo">Trabalhos recentes</h2>
+        <h2 class="col-12 titulo">{{ $t("recentWorksTitle") }}</h2>
         <div class="col-12 col-md-6">
           <h3>ONG Amaar</h3>
           <p class="texto-fundo-preto">
-            Trabalho voluntário realizado para a ONG Amaar. Tecnologias
-            utilizadas: Vue.js, Vuetify, Vue Router e CSS
+            {{ $t("workOng") }}
           </p>
           <a
             href="https://helton-mori-dev.github.io/ong-amaar-vue/"
             class="link-trabalho"
             target="blank"
-            >Ir para ONG Amaar</a
+            >{{ $t("goTo") }} ONG Amaar</a
           >
         </div>
         <div class="col-12 col-md-6">
@@ -25,14 +24,13 @@
         <div class="col-12 col-md-6">
           <h3>Viso Store</h3>
           <p class="texto-fundo-preto">
-            Loja virtual desenvolvida na plataforma Magento, utilizando PHP,
-            HTML, CSS, SAAS, Jquery e Javascript
+            {{ $t("workViso") }}
           </p>
           <a
             href="https://www.visostore.com.br/"
             class="link-trabalho"
             target="blank"
-            >Ir para Viso Store</a
+            >{{ $t("goTo") }} Viso Store</a
           >
         </div>
         <div class="col-12 col-md-6">
@@ -44,12 +42,12 @@
         <div class="col-12 col-md-6">
           <h3>Front end Mentor E-commerce page</h3>
           <p class="texto-fundo-preto">
-            Projeto teste realizado com Vue.js 3 e Vuex 4
+            {{ $t("workMentor") }}
           </p>
           <a
             href="https://helton-mori-dev.github.io/front-end-mentor-e-commerce/"
             class="link-trabalho"
-            >Ir para o projeto</a
+            >{{ $t("goTo") }} Front end Mentor</a
           >
         </div>
         <div class="col-12 col-md-6">

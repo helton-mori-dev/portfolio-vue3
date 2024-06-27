@@ -13,29 +13,29 @@
     </div>
   </div>
   <div class="nav-left" :class="{ active: menuActive }">
-    <a class="inicio" href="/" title="Início" @click="closeMenuAndScroll"
-      >Início</a
-    >
+    <a class="inicio" href="/" title="Início" @click="closeMenuAndScroll">{{
+      $t("linkHome")
+    }}</a>
     <a
       class="sobre-menu"
       href="#sobre"
       title="Sobre"
       @click="closeMenuAndScroll"
-      >Sobre mim</a
+      >{{ $t("linkAbout") }}</a
     >
     <a
       class="trabalhos scroll"
       href="#trabalhos"
       title="Trabalhos"
       @click="closeMenuAndScroll"
-      >Trabalhos</a
+      >{{ $t("linkWork") }}</a
     >
     <a
       class="contato-menu scroll"
       href="#footer"
       title="Contato"
       @click="closeMenuAndScroll"
-      >Contato</a
+      >{{ $t("contact") }}</a
     >
   </div>
 </template>

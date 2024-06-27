@@ -2,13 +2,13 @@
   <section id="footer">
     <div class="container rodape-contato">
       <div class="container-fluid">
-        <h2>E aí, vamos trabalhar juntos?</h2>
+        <h2>{{ $t("letsWork") }}</h2>
         <a
           class="botao-azul botao-form"
           href="https://www.linkedin.com/in/engheltonmori/"
           title="Contato"
           target="_blank"
-          >Entre em contato</a
+          >{{ $t("contact") }}</a
         >
       </div>
       <div class="container row linha">
@@ -17,8 +17,8 @@
     </div>
     <div class="container creditos">
       <p>
-        © <span class="year">{{ currentYear }}</span> - Desenvolvido por Helton
-        Mori
+        © <span class="year">{{ currentYear }}</span> -
+        {{ $t("developedBy") }} Helton Mori
       </p>
     </div>
   </section>
