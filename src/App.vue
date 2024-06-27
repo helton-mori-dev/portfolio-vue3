@@ -48,10 +48,6 @@ body #app {
     h1 {
       font-size: 50px;
     }
-
-    h2.titulo {
-      text-align: center;
-    }
   }
 }
 

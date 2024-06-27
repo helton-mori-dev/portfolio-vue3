@@ -2,6 +2,16 @@
   <section id="trabalhos">
     <div class="container-preto">
       <div class="container row trabalho">
+        <h2 class="col-12 titulo">{{ $t("companiesWorked") }}</h2>
+        <div>
+          <ul class="companies">
+            <li v-for="logo in logos" :key="logo.name" class="company">
+              <img :src="getImagePath(logo.path)" :alt="logo.name" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container row trabalho">
         <h2 class="col-12 titulo">{{ $t("recentWorksTitle") }}</h2>
         <div class="col-12 col-md-6">
           <h3>ONG Amaar</h3>
@@ -19,7 +29,6 @@
           <img src="../assets/img/foto-amaar.png" alt="ONG amaar" />
         </div>
       </div>
-
       <div class="container row trabalho">
         <div class="col-12 col-md-6">
           <h3>Viso Store</h3>
@@ -34,7 +43,7 @@
           >
         </div>
         <div class="col-12 col-md-6">
-          <img src="../assets/img/foto-aquario.png" alt="" />
+          <img src="../assets/img/foto-viso.png" alt="" />
         </div>
       </div>
 
@@ -51,7 +60,7 @@
           >
         </div>
         <div class="col-12 col-md-6">
-          <img src="../assets/img/foto-aquario.png" alt="" />
+          <img src="../assets/img/foto-mentor.png" alt="" />
         </div>
       </div>
     </div>
@@ -61,6 +70,37 @@
 <script>
 export default {
   name: "MyProjects",
+  data() {
+    return {
+      logos: [
+        {
+          path: "americanas.png",
+          name: "Americanas",
+        },
+        {
+          path: "amil.png",
+          name: "amil",
+        },
+        {
+          path: "ifood.png",
+          name: "ifood",
+        },
+        {
+          path: "natura.png",
+          name: "natura",
+        },
+        {
+          path: "prudential.png",
+          name: "prudential",
+        },
+      ],
+    };
+  },
+  methods: {
+    getImagePath(imageName) {
+      return require(`@/assets/img/${imageName}`);
+    },
+  },
 };
 </script>
 
@@ -69,6 +109,10 @@ export default {
   .container-preto {
     padding-bottom: 170px;
   }
+}
+
+h2.titulo {
+  text-align: center;
 }
 
 .link-trabalho {
@@ -91,6 +135,11 @@ export default {
   &:hover:after {
     left: 15px;
   }
+}
+
+.companies {
+  display: flex;
+  margin-bottom: 7rem;
 }
 
 .saiba-mais {
@@ -138,14 +187,12 @@ export default {
 
 .formacao,
 .experiencia,
-.conhecimentos,
 .apresentacao {
   margin-bottom: 50px;
 }
 
 .experiencia,
-.formacao,
-.conhecimentos {
+.formacao {
   h4 {
     color: var(--blue);
     font-size: 18px;
@@ -153,13 +200,15 @@ export default {
   }
 }
 
-.conhecimentos {
-  .techs {
-    display: flex;
+@media screen and (max-width: 767px) {
+  .companies {
+    margin-bottom: 2rem;
     flex-wrap: wrap;
-
-    p {
-      width: 170px;
+    list-style: none;
+    justify-content: center;
+    img {
+      width: auto;
+      max-width: 200px;
     }
   }
 }

@@ -20,6 +20,7 @@ const messages = {
     linkHome: "Home",
     linkAbout: "About",
     linkWork: "Work",
+    companiesWorked: "Companies I created projects for",
   },
   pt: {
     aboutMe: "Olá, meu nome é Helton, sou desenvolvedor de sistemas :)",
@@ -40,6 +41,7 @@ const messages = {
     linkHome: "Início",
     linkAbout: "Sobre",
     linkWork: "Trabalhos",
+    companiesWorked: "Empresas para quem já prestei serviços",
   },
 };
 

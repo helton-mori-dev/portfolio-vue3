@@ -64,12 +64,18 @@ export default {
 }
 
 .linha {
-  margin-top: 1remx;
+  margin-top: 125px;
 }
 
 .creditos {
   padding-top: 15px;
   color: #999;
   font-weight: 300;
+}
+
+@media screen and (max-width: 767px) {
+  .linha {
+    margin-top: 1rem;
+  }
 }
 </style>
