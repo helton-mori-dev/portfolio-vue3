@@ -107,7 +107,7 @@ body #app {
   background: var(--azul);
   font-weight: 300;
   border-radius: 40px;
-  margin: 30px auto 0;
+  margin: 30px auto 2rem;
   text-align: center;
   padding: 8px 22px;
   font-size: 14px;
@@ -128,6 +128,39 @@ body #app {
 }
 
 @media screen and (max-width: 767px) {
+  .contato.contato-footer {
+    display: flex;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      // margin-top: 2rem;
+      li {
+        font-size: 0;
+
+        margin-bottom: 12px;
+
+        a {
+          font-size: 24px;
+          transition: 0.3s all ease;
+        }
+
+        &.linkedin:hover a {
+          color: #0e76a8;
+        }
+
+        &.email:hover a {
+          color: #f00;
+        }
+
+        &.github:hover a {
+          color: #333;
+        }
+      }
+    }
+  }
+
   header {
     width: 100%;
     margin: 0 !important;

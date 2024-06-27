@@ -14,7 +14,7 @@ const messages = {
     workViso:
       "E-commerce developed on the Magento platform, using PHP, HTML, CSS, SAAS, Jquery and Javascript",
     workMentor: "Test project carried out with Vue.js 3 and Vuex 4",
-    letsWork: "So, let's work together?",
+    letsWork: "Let's work together?",
     contact: "Contact",
     developedBy: "Developed by",
     linkHome: "Home",

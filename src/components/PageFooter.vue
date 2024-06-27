@@ -11,6 +11,7 @@
           >{{ $t("contact") }}</a
         >
       </div>
+      <LateralContact class="contato-footer" />
       <div class="container row linha">
         <div class="col-12"></div>
       </div>
@@ -25,12 +26,17 @@
 </template>
 
 <script>
+import LateralContact from "./LateralContact.vue";
+
 export default {
   name: "PageFooter",
   data() {
     return {
       currentYear: new Date().getFullYear(),
     };
+  },
+  components: {
+    LateralContact,
   },
 };
 </script>
@@ -58,7 +64,7 @@ export default {
 }
 
 .linha {
-  margin-top: 125px;
+  margin-top: 1remx;
 }
 
 .creditos {

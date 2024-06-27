@@ -35,41 +35,47 @@ export default {
 
 <style scoped>
 .contato {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 50px;
-  background-color: transparent;
-  z-index: 100;
-  height: 100%;
-
-  ul {
-    list-style: none;
-    position: absolute;
+  display: none;
+}
+@media screen and (min-width: 769px) {
+  .contato {
+    display: block;
+    position: fixed;
     left: 0;
-    top: 40%;
-    padding-left: 30px;
+    top: 0;
+    width: 50px;
+    background-color: transparent;
+    z-index: 100;
+    height: 100%;
 
-    li {
-      font-size: 0;
-      float: left;
-      margin-bottom: 12px;
+    ul {
+      list-style: none;
+      position: absolute;
+      left: 0;
+      top: 40%;
+      padding-left: 30px;
 
-      a {
-        font-size: 24px;
-        transition: 0.3s all ease;
-      }
+      li {
+        font-size: 0;
+        float: left;
+        margin-bottom: 12px;
 
-      &.linkedin:hover a {
-        color: #0e76a8;
-      }
+        a {
+          font-size: 24px;
+          transition: 0.3s all ease;
+        }
 
-      &.email:hover a {
-        color: #f00;
-      }
+        &.linkedin:hover a {
+          color: #0e76a8;
+        }
 
-      &.github:hover a {
-        color: #333;
+        &.email:hover a {
+          color: #f00;
+        }
+
+        &.github:hover a {
+          color: #333;
+        }
       }
     }
   }
