@@ -1,6 +1,21 @@
 <template>
   <header class="row">
-    <div class="col-6 col-md-4"></div>
+    <div class="col-6 col-md-4">
+      <button
+        class="i18nbutton btn"
+        :class="{ selected: currentLanguage === 'en' }"
+        @click="changeLanguage('en')"
+      >
+        En
+      </button>
+      <button
+        class="i18nbutton btn"
+        :class="{ selected: currentLanguage === 'pt' }"
+        @click="changeLanguage('pt')"
+      >
+        Pt
+      </button>
+    </div>
     <div class="col-4 d-none d-sm-none d-md-block text-center">
       <a href="/" class="title">Helton Mori</a>
     </div>
@@ -17,6 +32,21 @@ export default {
   components: {
     MenuHeader,
     LateralContact,
+  },
+  data() {
+    return {
+      currentLanguage: this.$i18n.locale,
+    };
+  },
+  watch: {
+    "$i18n.locale"(newLocale) {
+      this.currentLanguage = newLocale;
+    },
+  },
+  methods: {
+    changeLanguage(language) {
+      this.$i18n.locale = language;
+    },
   },
 };
 </script>
@@ -52,6 +82,17 @@ header {
         width: 16px;
         border-radius: 100%;
       }
+    }
+  }
+  .i18nbutton {
+    color: #999;
+    font-weight: 700;
+    border: none;
+    &:hover {
+      color: var(--azul);
+    }
+    &.selected {
+      color: #000;
     }
   }
 }

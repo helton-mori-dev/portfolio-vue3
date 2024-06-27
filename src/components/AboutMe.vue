@@ -1,13 +1,12 @@
 <template>
   <section class="main container">
     <h1 class="title">
-      Olá, meu nome é <span>Helton</span>,<br />
-      sou desenvolvedor de sistemas :)
+      {{ $t("aboutMe") }}
     </h1>
 
-    <a class="botao-azul scroll" href="#sobre" title="Portfolio"
-      >Conheça meu trabalho</a
-    >
+    <a class="botao-azul scroll" href="#sobre" title="Portfolio">{{
+      $t("myWork")
+    }}</a>
     <a href="#sobre" class="scroll arrow-down"> </a>
   </section>
 
@@ -17,7 +16,7 @@
         <div class="col-12 col-md-5"></div>
         <div class="col-12 col-md-7">
           <h2 class="titulo-apresentacao titulo">
-            Sou desenvolvedor de sistemas
+            {{ $t("myFunction") }}
           </h2>
         </div>
       </div>
@@ -31,15 +30,8 @@
           <p
             class="texto-fundo-preto paragrafo-direita mb-0 paragrafo-direita-mobile"
           >
-            Meu nome é Helton, tenho experiencia em desenvolvimento de software,
-            principalmente front-end. Também tenho conhecimento em back-end e
-            sistemas embarcados. Sou apaixonado por tecnologia e informática.
-            Estou sempre buscando meu aperfeiçoamento pessoal e técnico, fazendo
-            cursos e tentando contribuir com projetos open-source.
+            {{ $t("aboutMeExt") }}
           </p>
-          <!-- <a class="link-trabalho saiba-mais mb-5" href="/" title="Portfolio"
-            >Saiba mais</a
-          > -->
         </div>
       </div>
     </div>
@@ -68,6 +60,7 @@ export default {
     font-weight: bold;
     text-align: center;
     font-size: 2rem;
+    max-width: 60%;
 
     span {
       color: var(--azul);
