@@ -13,12 +13,16 @@
     </div>
   </div>
   <div class="nav-left" :class="{ active: menuActive }">
-    <a class="inicio" href="/" title="Início" @click="closeMenuAndScroll">{{
-      $t("linkHome")
-    }}</a>
+    <a
+      class="inicio"
+      href="https://helton-mori-dev.github.io/portfolio-vue3/"
+      title="Início"
+      @click="closeMenuAndScroll"
+      >{{ $t("linkHome") }}</a
+    >
     <a
       class="sobre-menu"
-      href="https://helton-mori-dev.github.io/portfolio-vue3/"
+      href="#sobre"
       title="Sobre"
       @click="closeMenuAndScroll"
       >{{ $t("linkAbout") }}</a
