@@ -18,7 +18,7 @@
     }}</a>
     <a
       class="sobre-menu"
-      href="#sobre"
+      href="https://helton-mori-dev.github.io/portfolio-vue3/"
       title="Sobre"
       @click="closeMenuAndScroll"
       >{{ $t("linkAbout") }}</a

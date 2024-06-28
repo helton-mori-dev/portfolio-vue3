@@ -17,7 +17,9 @@
       </button>
     </div>
     <div class="col-4 d-none d-sm-none d-md-block text-center">
-      <a href="/" class="title">Helton Mori</a>
+      <a href="https://helton-mori-dev.github.io/portfolio-vue3/" class="title"
+        >Helton Mori</a
+      >
     </div>
   </header>
   <MenuHeader />
