@@ -14,7 +14,7 @@
       <div class="container row trabalho">
         <h2 class="col-12 titulo">{{ $t("recentWorksTitle") }}</h2>
         <div class="col-12 col-md-6">
-          <h3>ONG Amaar</h3>
+          <h3>{{ $t("workOngName") }}</h3>
           <p class="texto-fundo-preto">
             {{ $t("workOng") }}
           </p>
@@ -22,7 +22,7 @@
             href="https://helton-mori-dev.github.io/ong-amaar-vue/"
             class="link-trabalho"
             target="blank"
-            >{{ $t("goTo") }} ONG Amaar</a
+            >{{ $t("goTo") }} {{ $t("workOngName") }}</a
           >
         </div>
         <div class="col-12 col-md-6">

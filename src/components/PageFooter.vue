@@ -74,8 +74,13 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
-  .linha {
-    margin-top: 1rem;
+  #footer {
+    h2 {
+      font-size: 2rem;
+    }
+    .linha {
+      margin-top: 1rem;
+    }
   }
 }
 </style>

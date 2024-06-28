@@ -60,7 +60,7 @@ export default {
     font-weight: bold;
     text-align: center;
     font-size: 2rem;
-    max-width: 60%;
+    max-width: 70%;
 
     span {
       color: var(--azul);

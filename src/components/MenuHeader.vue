@@ -182,4 +182,13 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .nav-left {
+    a {
+      margin: 0.5rem auto;
+      font-size: 2rem;
+    }
+  }
+}
 </style>

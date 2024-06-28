@@ -41,14 +41,6 @@ body #app {
   justify-content: center;
   position: relative;
   margin-bottom: 150px;
-
-  @media screen and (min-width: 768px) {
-    width: 700px;
-
-    h1 {
-      font-size: 50px;
-    }
-  }
 }
 
 .container-branco,
