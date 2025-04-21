@@ -21,6 +21,7 @@ const messages = {
     linkHome: "Home",
     linkAbout: "About me",
     linkWork: "Work",
+    linkBlog: "Blog",
     companiesWorked: "Companies I created projects for",
   },
   pt: {
@@ -43,6 +44,7 @@ const messages = {
     linkHome: "Início",
     linkAbout: "Sobre mim",
     linkWork: "Trabalhos",
+    linkBlog: "Blog",
     companiesWorked: "Empresas para quem já prestei serviços",
   },
 };

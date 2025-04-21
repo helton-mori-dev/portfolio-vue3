@@ -14,32 +14,14 @@
   </div>
   <div class="nav-left" :class="{ active: menuActive }">
     <a
-      class="inicio"
-      href="https://helton-mori-dev.github.io/portfolio-vue3/"
-      title="Início"
+      v-for="link in links"
+      :key="link.href"
+      :href="link.href"
+      :class="link.class"
       @click="closeMenuAndScroll"
-      >{{ $t("linkHome") }}</a
+      :title="$t(link.title)"
     >
-    <a
-      class="sobre-menu"
-      href="#sobre"
-      title="Sobre"
-      @click="closeMenuAndScroll"
-      >{{ $t("linkAbout") }}</a
-    >
-    <a
-      class="trabalhos scroll"
-      href="#trabalhos"
-      title="Trabalhos"
-      @click="closeMenuAndScroll"
-      >{{ $t("linkWork") }}</a
-    >
-    <a
-      class="contato-menu scroll"
-      href="#footer"
-      title="Contato"
-      @click="closeMenuAndScroll"
-      >{{ $t("contact") }}</a
+      {{ $t(link.title) }}</a
     >
   </div>
 </template>
@@ -50,6 +32,29 @@ export default {
   data() {
     return {
       menuActive: false,
+      links: [
+        {
+          class: "inicio",
+          href: "https://helton-mori-dev.github.io/portfolio-vue3/",
+          title: "linkHome",
+        },
+        {
+          class: "sobre-menu",
+          href: "#sobre",
+          title: "linkAbout",
+        },
+        // { class: "blog", href: "#blog", title: "Blog" },
+        {
+          class: "trabalhos scroll",
+          href: "#trabalhos",
+          title: "linkWork",
+        },
+        {
+          class: "contato-menu scroll",
+          href: "#footer",
+          title: "Contato",
+        },
+      ],
     };
   },
   methods: {
@@ -80,8 +85,8 @@ export default {
   margin-top: 16px;
   height: 40px;
   width: 55px;
-  position: absolute;
-  top: 0%;
+  position: fixed;
+  top: 0;
   right: 0;
   cursor: pointer;
   font-size: 0;
@@ -170,16 +175,17 @@ export default {
 
   a {
     display: table;
-    margin: 2.5rem auto;
+    margin: 2rem auto;
     width: 100%;
     text-align: center;
-    padding: 18px 0;
+    padding: 12px 0;
     font-weight: 700;
     font-size: 50px;
     max-height: 46px;
     color: #fff;
     text-decoration: none;
     transition: 0.3s all ease;
+    cursor: pointer;
 
     &:hover {
       color: var(--azul);
